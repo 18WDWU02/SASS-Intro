@@ -1,0 +1,26 @@
+$primaryColour: #3498db;
+$width : 100vw;
+
+body{
+    background-color: $primaryColour;
+}
+
+p{
+    // color: $primaryColour;
+}
+
+div{
+    // color: $primaryColour;
+}
+
+#box1{
+    width: $width;
+    height: 100px;
+    background-color: #8e44ad;
+}
+
+#box2{
+    width: $width / 2;
+    height: 100px;
+    background-color: #ecf0f1;
+}
