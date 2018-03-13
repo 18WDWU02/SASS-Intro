@@ -1,26 +1,56 @@
-$primaryColour: #3498db;
-$width : 100vw;
-
-body{
-    background-color: $primaryColour;
-}
-
-p{
-    // color: $primaryColour;
-}
-
-div{
-    // color: $primaryColour;
-}
+@import "variables";
+@import "base_folder/base";
+@import "base_folder/header";
 
 #box1{
-    width: $width;
-    height: 100px;
+    @include boxSize;
     background-color: #8e44ad;
 }
 
 #box2{
-    width: $width / 2;
-    height: 100px;
+    @include boxSize;
     background-color: #ecf0f1;
 }
+
+#box3{
+    @include boxSize;
+    background-color: #34495e;
+}
+
+main::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+
+footer{
+    background-color: lighten($primaryColour, 10%);
+    nav{
+        ul{
+            list-style: none;
+            text-align: right;
+            li{
+                color: white;
+            }
+        }
+    }
+}
+
+h1{
+    color: complement($primaryColour);
+}
+
+$boxCount : 4;
+@for $i from 1 through $boxCount{
+    #box#{$i}{
+        width: $width * $i;
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+// end
